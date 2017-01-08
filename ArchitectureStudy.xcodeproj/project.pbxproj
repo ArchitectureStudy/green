@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3539F387550D1A1BC66A4A41 /* Pods_ArchitectureStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E568CD0B5CA1CA353B52AECA /* Pods_ArchitectureStudy.framework */; };
+		DCAC84611E222CA4008D8C3A /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAC84601E222CA4008D8C3A /* IssueModel.swift */; };
 		DCC115CF1E210AAD0031394B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115CE1E210AAD0031394B /* AppDelegate.swift */; };
 		DCC115D41E210AAD0031394B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC115D21E210AAD0031394B /* Main.storyboard */; };
 		DCC115D61E210AAD0031394B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC115D51E210AAD0031394B /* Assets.xcassets */; };
@@ -14,12 +16,15 @@
 		DCC115E61E210CBD0031394B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115E51E210CBD0031394B /* HomeViewController.swift */; };
 		DCC115ED1E2211BD0031394B /* MVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC115EC1E2211BD0031394B /* MVC.storyboard */; };
 		DCC115F91E22153D0031394B /* MVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115F41E22153D0031394B /* MVCViewController.swift */; };
-		DCC115FA1E22153D0031394B /* IssueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115F61E22153D0031394B /* IssueModel.swift */; };
+		DCC115FA1E22153D0031394B /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115F61E22153D0031394B /* RepoModel.swift */; };
 		DCC115FB1E22153D0031394B /* MVCCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115F81E22153D0031394B /* MVCCollectionViewCell.swift */; };
 		DCC115FD1E2216880031394B /* IssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC115FC1E2216880031394B /* IssueDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D555246CD0ECD93A8B8C43C /* Pods-ArchitectureStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArchitectureStudy/Pods-ArchitectureStudy.debug.xcconfig"; sourceTree = "<group>"; };
+		D296DF5CA7822134F3A57E56 /* Pods-ArchitectureStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArchitectureStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArchitectureStudy/Pods-ArchitectureStudy.release.xcconfig"; sourceTree = "<group>"; };
+		DCAC84601E222CA4008D8C3A /* IssueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
 		DCC115CB1E210AAD0031394B /* ArchitectureStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC115CE1E210AAD0031394B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCC115D31E210AAD0031394B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,9 +34,10 @@
 		DCC115E51E210CBD0031394B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCC115EC1E2211BD0031394B /* MVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MVC.storyboard; sourceTree = "<group>"; };
 		DCC115F41E22153D0031394B /* MVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCViewController.swift; sourceTree = "<group>"; };
-		DCC115F61E22153D0031394B /* IssueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueModel.swift; sourceTree = "<group>"; };
+		DCC115F61E22153D0031394B /* RepoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		DCC115F81E22153D0031394B /* MVCCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCCollectionViewCell.swift; sourceTree = "<group>"; };
 		DCC115FC1E2216880031394B /* IssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueDetailViewController.swift; sourceTree = "<group>"; };
+		E568CD0B5CA1CA353B52AECA /* Pods_ArchitectureStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArchitectureStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3539F387550D1A1BC66A4A41 /* Pods_ArchitectureStudy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550DE16B5BC0F2CD93E12836 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D555246CD0ECD93A8B8C43C /* Pods-ArchitectureStudy.debug.xcconfig */,
+				D296DF5CA7822134F3A57E56 /* Pods-ArchitectureStudy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B90524B4256F2DEE1A4526D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E568CD0B5CA1CA353B52AECA /* Pods_ArchitectureStudy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DCC115C21E210AAD0031394B = {
 			isa = PBXGroup;
 			children = (
 				DCC115CD1E210AAD0031394B /* ArchitectureStudy */,
 				DCC115CC1E210AAD0031394B /* Products */,
+				550DE16B5BC0F2CD93E12836 /* Pods */,
+				8B90524B4256F2DEE1A4526D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,7 +156,8 @@
 		DCC115F51E22153D0031394B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DCC115F61E22153D0031394B /* IssueModel.swift */,
+				DCC115F61E22153D0031394B /* RepoModel.swift */,
+				DCAC84601E222CA4008D8C3A /* IssueModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCC115DD1E210AAD0031394B /* Build configuration list for PBXNativeTarget "ArchitectureStudy" */;
 			buildPhases = (
+				2FE9327196CFA947B173E33E /* [CP] Check Pods Manifest.lock */,
 				DCC115C71E210AAD0031394B /* Sources */,
 				DCC115C81E210AAD0031394B /* Frameworks */,
 				DCC115C91E210AAD0031394B /* Resources */,
+				D903CB571419A805D87D343F /* [CP] Embed Pods Frameworks */,
+				D14E779B3A7FD59631615706 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +242,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FE9327196CFA947B173E33E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D14E779B3A7FD59631615706 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArchitectureStudy/Pods-ArchitectureStudy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D903CB571419A805D87D343F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArchitectureStudy/Pods-ArchitectureStudy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DCC115C71E210AAD0031394B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -219,8 +297,9 @@
 			files = (
 				DCC115FB1E22153D0031394B /* MVCCollectionViewCell.swift in Sources */,
 				DCC115CF1E210AAD0031394B /* AppDelegate.swift in Sources */,
-				DCC115FA1E22153D0031394B /* IssueModel.swift in Sources */,
+				DCC115FA1E22153D0031394B /* RepoModel.swift in Sources */,
 				DCC115F91E22153D0031394B /* MVCViewController.swift in Sources */,
+				DCAC84611E222CA4008D8C3A /* IssueModel.swift in Sources */,
 				DCC115E61E210CBD0031394B /* HomeViewController.swift in Sources */,
 				DCC115FD1E2216880031394B /* IssueDetailViewController.swift in Sources */,
 			);
@@ -341,6 +420,7 @@
 		};
 		DCC115DE1E210AAD0031394B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D555246CD0ECD93A8B8C43C /* Pods-ArchitectureStudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FPY265UZF4;
@@ -354,6 +434,7 @@
 		};
 		DCC115DF1E210AAD0031394B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D296DF5CA7822134F3A57E56 /* Pods-ArchitectureStudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FPY265UZF4;
@@ -384,6 +465,7 @@
 				DCC115DF1E210AAD0031394B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

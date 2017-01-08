@@ -9,9 +9,11 @@
 import Foundation
 
 class IssueModel {
-    var issueTitle: String?
-    
-    init(title: String) {
-        self.issueTitle = title
-    }
+    var id: Int?
+    var title: String?
+    var htmlURL: String?
+    var state: String?
+    var createdDate: Date?
+    var updatedDate: Date?
+    var closedDate: Date?
 }

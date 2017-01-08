@@ -9,5 +9,4 @@
 import UIKit
 
 class IssueDetailViewController: UIViewController {
-    var issue: IssueModel?
 }

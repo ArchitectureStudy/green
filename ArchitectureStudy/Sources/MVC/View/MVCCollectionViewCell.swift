@@ -10,10 +10,4 @@ import UIKit
 
 class MVCCollectionViewCell: UICollectionViewCell {
     @IBOutlet fileprivate weak var titleLabel: UILabel!
-    
-    var issue: IssueModel? {
-        didSet {
-            self.titleLabel.text = issue?.issueTitle
-        }
-    }
 }

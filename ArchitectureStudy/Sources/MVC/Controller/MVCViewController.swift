@@ -10,18 +10,15 @@ import UIKit
 
 class MVCViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    
-    fileprivate var issueList: [IssueModel] = []
 }
 
 extension MVCViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return issueList.count
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MVCIssueCell", for: indexPath) as! MVCCollectionViewCell
-        cell.issue = issueList[indexPath.item]
         
         return cell
     }
@@ -47,7 +44,6 @@ extension MVCViewController {
             }
             
             let vc = segue.destination as! IssueDetailViewController
-            vc.issue = issueList[indexPath.item]
         }
     }
 }
