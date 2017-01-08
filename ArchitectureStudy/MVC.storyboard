@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Cz-IB-Dz9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="mAB-XC-Q9d">
+            <objects>
+                <viewController id="4Cz-IB-Dz9" customClass="MVCViewController" customModule="ArchitectureStudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xvn-6T-v84"/>
+                        <viewControllerLayoutGuide type="bottom" id="2LI-ST-fEu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wN6-uk-cHh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xRK-E8-jBO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jpp-SU-X5e">
+                                    <size key="itemSize" width="375" height="60"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MVCIssueCell" id="Ezk-FU-AZU" customClass="MVCCollectionViewCell" customModule="ArchitectureStudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Cz-IB-Dz9" id="AS0-cu-Lqb"/>
+                                    <outlet property="delegate" destination="4Cz-IB-Dz9" id="Ap3-z0-XX2"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2LI-ST-fEu" firstAttribute="top" secondItem="xRK-E8-jBO" secondAttribute="bottom" id="UBO-jb-Ri4"/>
+                            <constraint firstItem="xRK-E8-jBO" firstAttribute="leading" secondItem="wN6-uk-cHh" secondAttribute="leading" id="ja3-ph-sze"/>
+                            <constraint firstItem="xRK-E8-jBO" firstAttribute="top" secondItem="xvn-6T-v84" secondAttribute="bottom" id="uwu-NE-qG1"/>
+                            <constraint firstAttribute="trailing" secondItem="xRK-E8-jBO" secondAttribute="trailing" id="wAM-L1-1Dp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="xRK-E8-jBO" id="FwC-HO-knP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tp-GB-t9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.5999999999999996" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
