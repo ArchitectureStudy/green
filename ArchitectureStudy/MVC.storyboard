@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,6 +30,11 @@
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="estimatedItemSize">
+                                            <size key="value" width="300" height="60"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MVCIssueCell" id="Ezk-FU-AZU" customClass="MVCCollectionViewCell" customModule="ArchitectureStudy" customModuleProvider="target">
@@ -38,19 +44,50 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타이이이이이틀!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNn-OZ-kuE">
-                                                    <rect key="frame" x="10" y="20" width="108" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icExclamationGreen" translatesAutoresizingMaskIntoConstraints="NO" id="O5F-lA-KWH">
+                                                    <rect key="frame" x="20" y="12" width="18" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="O5F-lA-KWH" secondAttribute="height" multiplier="1:1" id="9NN-iN-0kj"/>
+                                                        <constraint firstAttribute="width" constant="18" id="Xxc-uS-sPy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtC-jN-eat">
+                                                    <rect key="frame" x="42" y="34" width="31" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOU-l8-0ii" userLabel="Separator">
+                                                    <rect key="frame" x="20" y="59.5" width="355" height="0.5"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="0.5" id="S8Z-dz-0b8"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타이이이이이틀!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNn-OZ-kuE">
+                                                    <rect key="frame" x="42" y="10.5" width="313" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="bNn-OZ-kuE" firstAttribute="leading" secondItem="Ezk-FU-AZU" secondAttribute="leading" constant="10" id="KHF-ga-bdW"/>
-                                            <constraint firstItem="bNn-OZ-kuE" firstAttribute="centerY" secondItem="Ezk-FU-AZU" secondAttribute="centerY" id="cVj-ba-Sza"/>
+                                            <constraint firstItem="O5F-lA-KWH" firstAttribute="top" secondItem="Ezk-FU-AZU" secondAttribute="top" constant="12" id="1Gx-2n-2NS"/>
+                                            <constraint firstItem="gOU-l8-0ii" firstAttribute="leading" secondItem="Ezk-FU-AZU" secondAttribute="leading" constant="20" id="3GY-aR-OHv"/>
+                                            <constraint firstAttribute="trailing" secondItem="gOU-l8-0ii" secondAttribute="trailing" id="5Ln-HE-F0u"/>
+                                            <constraint firstItem="bNn-OZ-kuE" firstAttribute="top" secondItem="Ezk-FU-AZU" secondAttribute="top" constant="10" id="Iwu-0t-E81"/>
+                                            <constraint firstAttribute="trailing" secondItem="bNn-OZ-kuE" secondAttribute="trailing" constant="20" id="LlB-86-dAu"/>
+                                            <constraint firstAttribute="bottom" secondItem="gOU-l8-0ii" secondAttribute="bottom" id="PPa-hY-oaD"/>
+                                            <constraint firstItem="PtC-jN-eat" firstAttribute="top" secondItem="bNn-OZ-kuE" secondAttribute="bottom" constant="4" id="fmC-jM-ZM8"/>
+                                            <constraint firstItem="PtC-jN-eat" firstAttribute="leading" secondItem="bNn-OZ-kuE" secondAttribute="leading" id="gaT-pY-eNz"/>
+                                            <constraint firstItem="bNn-OZ-kuE" firstAttribute="leading" secondItem="O5F-lA-KWH" secondAttribute="trailing" constant="4" id="oyy-SH-3uN"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PtC-jN-eat" secondAttribute="bottom" constant="10" id="yo9-RA-Ycv"/>
+                                            <constraint firstItem="O5F-lA-KWH" firstAttribute="leading" secondItem="Ezk-FU-AZU" secondAttribute="leading" constant="20" id="zyd-G5-Cag"/>
                                         </constraints>
+                                        <size key="customSize" width="375" height="60"/>
                                         <connections>
+                                            <outlet property="subtitleLabel" destination="PtC-jN-eat" id="k25-Xh-aXE"/>
                                             <outlet property="titleLabel" destination="bNn-OZ-kuE" id="G7j-gE-Wev"/>
                                         </connections>
                                     </collectionViewCell>
@@ -78,4 +115,7 @@
             <point key="canvasLocation" x="5.5999999999999996" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icExclamationGreen" width="18" height="18"/>
+    </resources>
 </document>

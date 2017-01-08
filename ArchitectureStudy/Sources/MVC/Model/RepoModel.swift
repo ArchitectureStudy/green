@@ -8,10 +8,13 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class RepoModel {
-    var repoOwner: String?
-    var repoTitle: String?
+    static var issueList: [IssueModel] = []
+    
+    var repoOwner: String = ""
+    var repoTitle: String = ""
     
     init(owner: String, repoName: String) {
         self.repoOwner = owner
@@ -22,7 +25,16 @@ class RepoModel {
 extension RepoModel {
     func loadRepoIssues() {
         Alamofire.request("https://api.github.com/repos/\(repoOwner)/\(repoTitle)/issues").responseJSON { response in
-            print("\(response.result.value)")
+            guard let data = response.data else {
+                return
+            }
+            
+            RepoModel.issueList.removeAll()
+            JSON(data: data).forEach { jsonObject in
+                RepoModel.issueList.append(IssueModel(json: jsonObject.1))
+            }
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "RepoUpdated"), object: nil)
         }
     }
 }

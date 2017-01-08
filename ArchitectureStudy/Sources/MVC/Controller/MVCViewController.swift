@@ -10,40 +10,41 @@ import UIKit
 
 class MVCViewController: UIViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
+    
+    fileprivate var repoIssueList: [IssueModel] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
 }
 
 extension MVCViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return repoIssueList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MVCIssueCell", for: indexPath) as! MVCCollectionViewCell
+        cell.issue = repoIssueList[indexPath.item]
         
         return cell
     }
 }
 
-extension MVCViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+extension MVCViewController {
+    func updateRepoIssues() {
+        repoIssueList = RepoModel.issueList
     }
 }
 
 extension MVCViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
         
-        if segue.identifier == "ShowDetail" {
-            guard let indexPath = sender as? IndexPath else {
-                return
-            }
-            
-            let vc = segue.destination as! IssueDetailViewController
-        }
+        RepoModel(owner: "JakeWharton", repoName: "DiskLruCache").loadRepoIssues()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateRepoIssues),
+                                               name: NSNotification.Name(rawValue: "RepoUpdated"),
+                                               object: nil)
     }
 }
